@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@500&display=swap');
 
-@media only screen and (min-width:1000px){
+@media only screen and (min-width:100px){
 .inicio{
     display: grid;
     grid-template-columns:100px 5% auto 5%  ;     grid-template-rows: 130px 400px 200px auto;   
