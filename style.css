@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@500&display=swap');
 
-@media only screen and (min-width:100px){
+
 .inicio{
     display: grid;
     grid-template-columns:100px 5% auto 5%  ;     grid-template-rows: 130px 400px 200px auto;   
@@ -8,14 +8,39 @@
     background-color: rgb(255, 255, 255);
     padding: 30px;
     font-family: 'Radio Canada', sans-serif;
-    overflow-x: hidden;
-    
+    overflow: hidden;
+    z-index: 0;
     
 
 }
 /*INDEX*/
 div{
-    border: 1px solid rgba(7, 202, 7, 0);
+    border: 1px solid rgba(7, 147, 202, 0);
+}
+.capa {
+    box-sizing: border-box;
+    position: absolute;
+    top: -2000px;
+    left: 146px;
+    width: 110%;
+    height: 167%;
+    z-index: 1;
+    /* background: #07ea18; */
+    mix-blend-mode: lighten;
+
+    animation-name: capa;
+    animation-duration: 5s;
+    animation-fill-mode: backwards;
+    
+}
+
+
+@keyframes capa {
+    0%{
+        top: 2213px;opacity: 0%;
+        }
+    
+    100%{top: -2000px;opacity: 100%;}
 }
 .MarcoFoto{
     display: grid;   grid-column: 1;grid-row: 1;
@@ -83,7 +108,7 @@ div{
     opacity: 100%;
     animation-name: texto;
     animation-timing-function: cubic-bezier(0.75, 0.82, 0.165,1);
-    animation-duration: 2.5s;
+    animation-duration: 2s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
 }  
@@ -139,6 +164,7 @@ div{
     width: 100%;
     position:fixed ;bottom: 0px;
     color:white;
+    z-index: 5;
 }
 .footer span{
     display:grid;
@@ -198,12 +224,4 @@ a:link, a:visited, a:active {
     color:white;
 }
 .academic:hover,.personal:hover span{transform: scale(90%);}
-}
 
-/*BARRITAS*/
-.barrita1{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-
-}
